@@ -4,5 +4,11 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  font-size: 25px;
+  font-style: italic;
+}
+
+
+h6 {
+  font-weight: 700;
 }
