@@ -7,8 +7,13 @@ var router = express.Router();
 // Actual paths will start with skills/
 
 //Get route
-router.get('/', skillsCtrl.index)
+router.get('/', skillsCtrl.index);
+
+router.get('/new', skillsCtrl.new);
 // GET /skills/:id
 router.get('/:id', skillsCtrl.show);
+
+router.post('/', skillsCtrl.create);
+
 
 module.exports = router;

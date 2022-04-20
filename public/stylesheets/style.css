@@ -12,3 +12,8 @@ a {
 h6 {
   font-weight: 700;
 }
+
+#wrapper{
+  margin: 0 auto;
+  width:300px;
+}
