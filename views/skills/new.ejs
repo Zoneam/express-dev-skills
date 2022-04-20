@@ -11,13 +11,13 @@
 </head>
 <body>
     <div id="wrapper">
-    <h1>Skill</h1>
-    <form action="/skills" method="POST" autocomplete="off">
-        <input type="text" name="skill">
+    <h1>Add Skill</h1>
+    <form action="/skills" method="POST" autocomplete="off" class="form-control" >
+        <input type="text" name="skill" id="new-skill" class='bg-warning'>
         <div> <br>
             <h6>Skill Level</h6>
             <div class="input-group">
-                <select class="form-select" name="skillLevel" id="inputGroupSelect04" aria-label="Example select with button addon">
+                <select class="form-select" name="skillLevel" id="inputGroupSelect04">
                   <option selected>Choose Skill Level...</option>
                   <option value="1">1</option>
                   <option value="2">2</option>

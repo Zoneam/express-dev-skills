@@ -14,7 +14,12 @@
     <div class="list-group">    
             <% skills.forEach(function(skill) { %>
                 <a href="/skills/<%= skill.id %>" class="text-center list-group-item list-group-item-action <%= (skill.skillLevel <= 5) ? 'list-group-item-danger' : (skill.skillLevel > 5 && skill.skillLevel < 8)? 'list-group-item-warning' : 'list-group-item-success' %>">
-                    <%= skill.skill %> <h6>Skill Level: <%= skill.skillLevel %></h6></a>
+                    <%= skill.skill %> <h6>Skill Level: <%= skill.skillLevel %></h6>
+                    <form action="/skills/<%= skill.id %>?_method=DELETE"
+                        class="delete-form" method="POST">
+                        <button type="submit" class="btn btn-danger">X</button>
+                      </form>
+                </a>
             <% }); %>
     </div>
     <a href="/skills/new">Add Skill</a>
