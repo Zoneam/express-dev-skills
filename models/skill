@@ -13,7 +13,8 @@ const skills = [
     getAll,
     getOne,
     create,
-    deleteOne
+    deleteOne,
+    updateOne
   };
   
   function getAll() {
@@ -33,4 +34,12 @@ const skills = [
   function deleteOne(id) {
     const idx = skills.findIndex(skill => skill.id === parseInt(id));
     skills.splice(idx, 1);
+  }
+
+  function updateOne(req) {
+    id = parseInt(req.params.id);
+    let updatedSkill = {id: id, skill:req.body.skill, skillLevel: parseInt(req.body.skillLevel)}
+    const idx = skills.findIndex(skill => skill.id === id);
+    skills[idx] = updatedSkill
+    console.log(skills)
   }

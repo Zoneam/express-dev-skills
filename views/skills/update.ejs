@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel='stylesheet' href='../stylesheets/style.css'/>
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+    <h1>Update Skill</h1>
+    <form action="/skills/update/<%= id %>?_method=PUT" method="POST" autocomplete="off" class="form-control" >
+        <input type="text" name="skill" id="new-skill" class='bg-warning' value="<%= skill %>">
+        <div> <br>
+            <h6>Skill Level</h6>
+            <div class="input-group">
+                <select class="form-select" name="skillLevel" id="inputGroupSelect04">
+                  <option value="1" <%= skillLevel === 1?'selected':null %>>1</option>
+                  <option value="2" <%= skillLevel === 2?'selected':null %>>2</option>
+                  <option value="3" <%= skillLevel === 3?'selected':null %>>3</option>
+                  <option value="4" <%= skillLevel === 4?'selected':null %>>4</option>
+                  <option value="5" <%= skillLevel === 5?'selected':null %>>5</option>
+                  <option value="6" <%= skillLevel === 6?'selected':null %>>6</option>
+                  <option value="7" <%= skillLevel === 7?'selected':null %>>7</option>
+                  <option value="8" <%= skillLevel === 8?'selected':null %>>8</option>
+                  <option value="9" <%= skillLevel === 9?'selected':null %>>9</option>
+                  <option value="10" <%= skillLevel === 10?'selected':null %>>10</option>
+                </select>
+                <button class="btn btn-outline-secondary" type="submit">Update Skill</button>
+              </div>
+      </form>
+    </div>
+</body>
+</html>

@@ -32,3 +32,9 @@ h1 {
 #new-skill{
   width: -webkit-fill-available;
 }
+
+.update-form{
+  position: absolute;
+  top: 0;
+  left: 0px;
+}

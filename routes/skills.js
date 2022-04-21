@@ -17,4 +17,8 @@ router.post('/', skillsCtrl.create);
 
 router.delete('/:id', skillsCtrl.delete);
 
+router.get('/update/:id', skillsCtrl.update);
+
+router.put('/update/:id', skillsCtrl.updateOneSkill);
+
 module.exports = router;
