@@ -38,3 +38,14 @@ h1 {
   top: 0;
   left: 0px;
 }
+
+#wrapper-update{
+  margin: 0 auto;
+  width:300px;
+}
+
+.update-form > button {
+  font-size: 2.3em;
+  padding: 0 0 9px 0;
+  line-height: 31px;
+}

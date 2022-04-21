@@ -41,5 +41,4 @@ const skills = [
     let updatedSkill = {id: id, skill:req.body.skill, skillLevel: parseInt(req.body.skillLevel)}
     const idx = skills.findIndex(skill => skill.id === id);
     skills[idx] = updatedSkill
-    console.log(skills)
   }
