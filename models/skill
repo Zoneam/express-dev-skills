@@ -2,10 +2,10 @@ const skills = [
     {id: 125223, skill: 'JavaScript', skillLevel: 10},
     {id: 127904, skill: 'Express', skillLevel: 7},
     {id: 139608, skill: 'MongoDb', skillLevel: 5},
-    {id: 127223, skill: 'React', skillLevel: 5},
-    {id: 127004, skill: 'HTML', skillLevel: 7},
+    {id: 127223, skill: 'React', skillLevel: 4},
+    {id: 127004, skill: 'HTML', skillLevel: 8},
     {id: 139008, skill: 'CSS', skillLevel: 3},
-    {id: 125023, skill: 'SQL', skillLevel: 3},
+    {id: 125023, skill: 'SQL', skillLevel: 2},
     {id: 127604, skill: 'node.js', skillLevel: 6},
   ];
   
