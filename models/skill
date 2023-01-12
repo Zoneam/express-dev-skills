@@ -1,0 +1,44 @@
+const skills = [
+    {id: 125223, skill: 'JavaScript', skillLevel: 10},
+    {id: 127904, skill: 'Express', skillLevel: 7},
+    {id: 139608, skill: 'MongoDb', skillLevel: 5},
+    {id: 127223, skill: 'React', skillLevel: 4},
+    {id: 127004, skill: 'HTML', skillLevel: 8},
+    {id: 139008, skill: 'CSS', skillLevel: 3},
+    {id: 125023, skill: 'SQL', skillLevel: 2},
+    {id: 127604, skill: 'node.js', skillLevel: 6},
+  ];
+  
+  module.exports = {
+    getAll,
+    getOne,
+    create,
+    deleteOne,
+    updateOne
+  };
+  
+  function getAll() {
+    return skills;
+  }
+
+  function getOne(id) {
+    id = parseInt(id);
+    return skills.find(skill => skill.id === id);
+  }
+
+  function create(skill) {
+    skill.id = Date.now() % 1000000;
+    skills.push(skill);
+  }
+
+  function deleteOne(id) {
+    const idx = skills.findIndex(skill => skill.id === parseInt(id));
+    skills.splice(idx, 1);
+  }
+
+  function updateOne(req) {
+    id = parseInt(req.params.id);
+    let updatedSkill = {id: id, skill:req.body.skill, skillLevel: parseInt(req.body.skillLevel)}
+    const idx = skills.findIndex(skill => skill.id === id);
+    skills[idx] = updatedSkill
+  }
