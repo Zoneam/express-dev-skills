@@ -9,6 +9,12 @@ var indexRouter = require('./routes/index');
 var skillsRouter = require('./routes/skills');
 
 var app = express();
+const attachTime = (req, res, next) => {
+  res.locals.currentTime = new Date().toLocaleString();
+  next();
+};
+
+// Attach the middleware to the app
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -20,7 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
-
+app.use(attachTime);
 app.use('/', indexRouter);
 app.use('/skills', skillsRouter);
 
